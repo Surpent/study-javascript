@@ -8,24 +8,36 @@
     <script>
     /*
         ループ処理
-        while
-        do ... while
+        for
+
+        break ループ処理を抜ける
+        continue ループ処理を１回スキップ
     */
 
-    // 条件判断してから処理を行う
+    /*
     var i = 0;
     while (i < 10) {
         console.log("i= "+i);
         i++;
     }
+    */
 
-    // 先に処理を行ってから条件判断をする
-    var j = 200;
-    do {
-        console.log("j= "+j);
-        j++;
+    // i = 5 になったらループ処理を抜ける
+    for (var i = 0; i < 10; i++) {
+        if (i === 5) {
+            break;
+        }
+        console.log("i= " +i);
+    }
 
-    } while (j < 10);
+    // j = 3 をスキップする
+    for (var j = 0; j < 10; j++) {
+        if (j === 3) {
+            continue;
+        }
+        console.log("j= " +j);
+    }
+
 
     </script>
 </body>
