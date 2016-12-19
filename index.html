@@ -1,4 +1,4 @@
-<!DOCTYPE htm>
+<!DOCTYPE html>
 <html lang="ja">
 <head>
     <meta charset = "utf-8">
@@ -7,24 +7,27 @@
 <body>
     <script>
     /*
-        数値
-            10
-            2.5
-            -2.5
+        文字列
+            表現方法
+            特殊文字
         演算子
-            + - * / %
-            += 代入を伴う演算子
-            ++ -- 単項演算子
     */
 
-    var x;
-    x = 10 * 2; // 20
-    x %= 3; // 2
-    x += 5; // 7
-    x *= 5; // 35
-    x ++; // 36
-    x --; // 35
-    console.log(x);
+    var s;
+    s = "hello";
+    s = 'he\'llo';
+
+    /*
+    \ バックスラッシュは Option + ¥
+    \n 改行
+    \t タブ
+    */
+
+    s = "it\'s\n a pe\tn";
+    s = "hello " + "world";
+    s = "5" + 5; // "55
+
+    console.log(s);
 
     </script>
 </body>
