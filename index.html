@@ -6,38 +6,42 @@
 </head>
 <body>
     <script>
-    /*
-        ループ処理
-        for
+        /*
+            alert
+            confirm
+            prompt
+        */
 
-        break ループ処理を抜ける
-        continue ループ処理を１回スキップ
-    */
+        /*
+            alert
+            ダイアログ表示
+        */
+        //alert("hello");
 
-    /*
-    var i = 0;
-    while (i < 10) {
-        console.log("i= "+i);
-        i++;
-    }
-    */
 
-    // i = 5 になったらループ処理を抜ける
-    for (var i = 0; i < 10; i++) {
-        if (i === 5) {
-            break;
+        /*
+            confirm
+            ボタンありのダイアログ表示
+            OK -> true
+            Cancel -> false
+        */
+        // var answer = confirm("are you sure?");
+        // console.log(answer);
+
+        /*
+        if (confirm("本当に削除しますか？") {
+            // 削除処理
         }
-        console.log("i= " +i);
-    }
+        */
 
-    // j = 3 をスキップする
-    for (var j = 0; j < 10; j++) {
-        if (j === 3) {
-            continue;
-        }
-        console.log("j= " +j);
-    }
-
+        /*
+            prompt("メッセージ", "入力ボックス初期値。省略可");
+            文字入力ボックスありのダイアログ表示
+            OK -> 入力ボックスの値
+            Cancel -> null            
+        */
+        var name = prompt("お名前は？", "名無しさん");
+        console.log(name);
 
     </script>
 </body>
