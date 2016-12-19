@@ -7,41 +7,34 @@
 <body>
     <script>
         /*
-            alert
-            confirm
-            prompt
+            関数：　複数の処理
+
+            function 関数名(引数){
+                処理
+                return 返り値
+            }
+
+            複雑な計算などを行う場合には戻り値を使う
         */
 
-        /*
-            alert
-            ダイアログ表示
-        */
-        //alert("hello");
-
-
-        /*
-            confirm
-            ボタンありのダイアログ表示
-            OK -> true
-            Cancel -> false
-        */
-        // var answer = confirm("are you sure?");
-        // console.log(answer);
-
-        /*
-        if (confirm("本当に削除しますか？") {
-            // 削除処理
+        function firstFunc() {
+            console.log("hello world!");
         }
-        */
+        firstFunc();
 
-        /*
-            prompt("メッセージ", "入力ボックス初期値。省略可");
-            文字入力ボックスありのダイアログ表示
-            OK -> 入力ボックスの値
-            Cancel -> null            
-        */
-        var name = prompt("お名前は？", "名無しさん");
-        console.log(name);
+        function hoge(h) {
+            console.log(h);
+        }
+
+        hoge("fuga");
+        hoge("hage");
+
+        function hello (name) {
+            return "hello" + name;
+        }
+
+        var greet = hello("Tom");
+        console.log(greet);
 
     </script>
 </body>
