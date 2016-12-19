@@ -5,29 +5,27 @@
     <title>JavaScriptの練習</title>
 </head>
 <body>
-    <script src="myscript.js"></script>
-
     <script>
     /*
-        変数　データにつけるラベル
-
-        データ型
-            －　文字列
-            －　数値
-            －　真偽値（tlue / false）
-            －　オブジェクト
-                －　配列
-                －　関数
-                －　組み込みオブジェクト
-            －　undefined　定義されていない
-            －　null　何もない
+        数値
+            10
+            2.5
+            -2.5
+        演算子
+            + - * / %
+            += 代入を伴う演算子
+            ++ -- 単項演算子
     */
 
-    var msg = "Hello world",
-        x = 20,
-        y = 10;
-    console.log(msg);
-    </script>
+    var x;
+    x = 10 * 2; // 20
+    x %= 3; // 2
+    x += 5; // 7
+    x *= 5; // 35
+    x ++; // 36
+    x --; // 35
+    console.log(x);
 
+    </script>
 </body>
 </html>
