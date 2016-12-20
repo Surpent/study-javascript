@@ -7,31 +7,26 @@
 <body>
     <script>
         /*
-            関数：　複数の処理
+            即時関数
 
-            function 関数名(引数){
-                処理
-                return 返り値
-            }
-
-            複雑な計算などを行う場合には戻り値を使う
+            すぐに実行される関数
+            カッコ（）で囲う
+            その中で定義された変数はローカル変数扱いとなり、
+            他に影響を与えないので多人数での作業に向く。
         */
 
         /*
-        function hello(name) {
-            var msg = "hello" + name; // ローカル変数
-            return msg;
-        }
+        // 即時関数の例
+        (function(name){
+            console.log("hello " + name);
+        }("Tom"));
         */
 
-        // 無名関数 匿名関数
-        var hello = function(name) {
-            var msg = "hello" + name; // ローカル変数
-            return msg;
-        };
-        
-        var greet = hello("Tom");
-        console.log(greet);
+        (function() {
+            var x = 10,
+                y = 20;
+            console.log(x + y);
+        })();
 
     </script>
 </body>
