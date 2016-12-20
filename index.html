@@ -15,30 +15,21 @@
             - Date
         */
 
-        var a = new Array(100, 300, 200);
-        // var a = [100, 300, 200];
-        console.log(a.length);
+        console.log(Math.PI); // 円周率
+        console.log(Math.ceil(5.3)); // 切り上げ 6
+        console.log(Math.floor(5.3)); // 切り捨て 5
+        console.log(Math.round(5.3)); // 四捨五入 5
+        console.log(Math.random());   // 0〜1の乱数
 
-        /*
-        unshift 先頭から要素を追加
-        push 末尾から要素を追加
+        var d = new Date();
+        // Date(年, 月(0〜11), 日, 時, 分, 秒);
+        // var d = new Date(2014, 1, 11, 10, 20, 30);
 
-        shift 先頭の要素を除去
-        pop 末尾の要素を除去
+        // 年を取得
+        console.log(d.getFullYear());
+        console.log(d.getMonth());
+        console.log(d.getTime()); // 1970/1/1 からの経過ミリ秒
 
-        splice 途中から要素を削除
-
-        removeItem インデックスを指定して削除
-
-        https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Array
-        */
-
-        a.push(500);
-        console.log(a);
-
-        // splice(何番目から,何個削除する, 追加要素1, 追加要素2, ...)
-        a.splice(1, 2, 800, 1000, 20000);
-        console.log(a);
 
     </script>
 </body>
