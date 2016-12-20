@@ -7,29 +7,17 @@
 <body>
     <script>
         /*
-            組み込みオブジェクト
-
-            - String
-            - Array
-            - Math
-            - Date
         */
 
-        console.log(Math.PI); // 円周率
-        console.log(Math.ceil(5.3)); // 切り上げ 6
-        console.log(Math.floor(5.3)); // 切り捨て 5
-        console.log(Math.round(5.3)); // 四捨五入 5
-        console.log(Math.random());   // 0〜1の乱数
+        console.dir(window); // ウィンドウの情報を取得
+        console.dir(outerHeight); // ウィンドウの高さを取得
 
-        var d = new Date();
-        // Date(年, 月(0〜11), 日, 時, 分, 秒);
-        // var d = new Date(2014, 1, 11, 10, 20, 30);
+        // ドットインストールを開く
+        //window.location.href = "http://dotinstall.com";
 
-        // 年を取得
-        console.log(d.getFullYear());
-        console.log(d.getMonth());
-        console.log(d.getTime()); // 1970/1/1 からの経過ミリ秒
+        // document いま開いているページ
 
+        // document object model (DOM)
 
     </script>
 </body>
