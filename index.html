@@ -17,22 +17,19 @@
             複雑な計算などを行う場合には戻り値を使う
         */
 
-        function firstFunc() {
-            console.log("hello world!");
+        /*
+        function hello(name) {
+            var msg = "hello" + name; // ローカル変数
+            return msg;
         }
-        firstFunc();
+        */
 
-        function hoge(h) {
-            console.log(h);
-        }
-
-        hoge("fuga");
-        hoge("hage");
-
-        function hello (name) {
-            return "hello" + name;
-        }
-
+        // 無名関数 匿名関数
+        var hello = function(name) {
+            var msg = "hello" + name; // ローカル変数
+            return msg;
+        };
+        
         var greet = hello("Tom");
         console.log(greet);
 
