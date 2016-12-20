@@ -13,13 +13,20 @@
 
         var user = {
             email: "taguchi@gmail.com", // プロパティ
-            score: 80
+            score: 80,
+            // メソッド
+            greet: function(name) {
+                console.log("hello, " + name + " from " + this.email);
+            }
         };
+
+        /*
         console.log(user["email"]); // キー名
         console.log(user.email);    // ドットで繋げてもいい
-
         user.score = 100;
         console.log(user);
+        */
+        user.greet("Tom");
 
     </script>
 </body>
