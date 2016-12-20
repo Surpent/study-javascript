@@ -7,49 +7,28 @@
 <body>
     <script>
         /*
-            タイマー処理
-                setInterval
-                setTimeout
-
-                setInterval
-                前の処理が終わらなくても実行する
-
-                setTimeout
-                前の処理が終わってから実行する
+            配列: グループ化されたデータ
         */
 
-        var i = 0;
-
-        // カウントを始める
-        function show() {
-            console.log(i++);
-            var tid = setTimeout(function() {
-                show();
-            }, 1000);
-            // timerが３以上になると止める
-            if (i > 3){
-                clearTimeout(tid);
-            }
-        }
-        show();
-
-        // １秒ごとにコンソール表示
         /*
-        setInterval(function() {
-            show();
-        }, 1000); // ミリ秒
+        var score = [100, 300, 500, taguchi];
+        // 添字 0, 1, ...
+        // console.log(score[0]);
+        score[2] = 400;
+        console.log(score);
         */
 
-        // １秒後にコンソール表示
-        /*
-        setTimeout(function() {
-            show();
-        }, 1000); // ミリ秒
-        */
+        // 行列 matrix
+        var m = [
+            [1,2,3],
+            ["abe","kimura","yoshioka"]
+        ];
 
+        // 変数 m の2列目、３番目のデータを取り出す
+        console.log(m[1][2]); // "yoshioka"
 
-
-
+        // m の内容を全て表示
+        console.log(m);
 
     </script>
 </body>
