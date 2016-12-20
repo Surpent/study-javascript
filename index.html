@@ -3,21 +3,34 @@
 <head>
     <meta charset = "utf-8">
     <title>JavaScriptの練習</title>
+    <style>
+        .myStyle{
+            font-weight: bold;
+            border: 1px solid gray;
+        }
+    </style>
 </head>
 <body>
+    <h1>見出し</h1>
+    <p id="msg">こんにちは</p>
     <script>
+
+        var e = document.getElementById("msg");
+        e.textContent="Hello!";
+        e.style.color = "red";
+        e.className = "myStyle";
+
         /*
+            body
+                p
+                    text
         */
 
-        console.dir(window); // ウィンドウの情報を取得
-        console.dir(outerHeight); // ウィンドウの高さを取得
-
-        // ドットインストールを開く
-        //window.location.href = "http://dotinstall.com";
-
-        // document いま開いているページ
-
-        // document object model (DOM)
+        // createElement エレメントの追加
+        var greet = document.createElement("p"),
+            text = document.createTextNode("Hello world");
+        // appendChild 子要素として一番最後に追加
+        document.body.appendChild(greet).appendChild(text);
 
     </script>
 </body>
