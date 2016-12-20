@@ -7,26 +7,49 @@
 <body>
     <script>
         /*
-            即時関数
+            タイマー処理
+                setInterval
+                setTimeout
 
-            すぐに実行される関数
-            カッコ（）で囲う
-            その中で定義された変数はローカル変数扱いとなり、
-            他に影響を与えないので多人数での作業に向く。
+                setInterval
+                前の処理が終わらなくても実行する
+
+                setTimeout
+                前の処理が終わってから実行する
         */
 
+        var i = 0;
+
+        // カウントを始める
+        function show() {
+            console.log(i++);
+            var tid = setTimeout(function() {
+                show();
+            }, 1000);
+            // timerが３以上になると止める
+            if (i > 3){
+                clearTimeout(tid);
+            }
+        }
+        show();
+
+        // １秒ごとにコンソール表示
         /*
-        // 即時関数の例
-        (function(name){
-            console.log("hello " + name);
-        }("Tom"));
+        setInterval(function() {
+            show();
+        }, 1000); // ミリ秒
         */
 
-        (function() {
-            var x = 10,
-                y = 20;
-            console.log(x + y);
-        })();
+        // １秒後にコンソール表示
+        /*
+        setTimeout(function() {
+            show();
+        }, 1000); // ミリ秒
+        */
+
+
+
+
 
     </script>
 </body>
