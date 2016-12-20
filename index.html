@@ -15,11 +15,30 @@
             - Date
         */
 
-        // var s = new String("taguchi"); // 文字列オブジェクト
-        var s = "taguchi"; // 文字列リテラル。オブジェクトとは別
-        console.log(s.length); // 文字列の長さ
-        console.log(s.replace("t", "T")); // 置き換える
-        console.log(s.substr(1, 3)); // 抜き出す sbstr(何文字目から,何文字抜き出すか)
+        var a = new Array(100, 300, 200);
+        // var a = [100, 300, 200];
+        console.log(a.length);
+
+        /*
+        unshift 先頭から要素を追加
+        push 末尾から要素を追加
+
+        shift 先頭の要素を除去
+        pop 末尾の要素を除去
+
+        splice 途中から要素を削除
+
+        removeItem インデックスを指定して削除
+
+        https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Array
+        */
+
+        a.push(500);
+        console.log(a);
+
+        // splice(何番目から,何個削除する, 追加要素1, 追加要素2, ...)
+        a.splice(1, 2, 800, 1000, 20000);
+        console.log(a);
 
     </script>
 </body>
