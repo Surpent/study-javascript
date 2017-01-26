@@ -1,37 +1,41 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
-    <meta charset = "utf-8">
-    <title>JavaScriptの練習</title>
-    <style>
+	<meta charset="utf-8">
+	<title>JavaScriptの練習 - Prototype</title>
+	<style>
         .myStyle{
             font-weight: bold;
             border: 1px solid gray;
         }
     </style>
 </head>
+
 <body>
-    <h1>見出し</h1>
-    <p id="msg">こんにちは</p>
-    <script>
+	<script>
+		// http://uhyohyo.net/javascript/9_2.html
 
-        var e = document.getElementById("msg");
-        e.textContent="Hello!";
-        e.style.color = "red";
-        e.className = "myStyle";
+//Yuushaという関数の型を作る
+function Yuusha(n){
+  this.name = n;
+}
+Yuusha.prototype.jikoshokai = function(){
+  console.log("私の名前は" + this.name + "です。" + "HPは" + this.hp + "です。");
+};
+Yuusha.prototype.hp = 100;
+//攻撃する
+Yuusha.prototype.attack = function(){
+  this.hp -= 20;
+  console.log("攻撃しました。 HPが" + this.hp + "に減りました。");
+};
 
-        /*
-            body
-                p
-                    text
-        */
+var yuusha1 = new Yuusha("勇者1");
 
-        // createElement エレメントの追加
-        var greet = document.createElement("p"),
-            text = document.createTextNode("Hello world");
-        // appendChild 子要素として一番最後に追加
-        document.body.appendChild(greet).appendChild(text);
-
-    </script>
+//攻撃してもらう
+yuusha1.attack();
+yuusha1.attack();
+	</script>
 </body>
+
 </html>
